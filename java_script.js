@@ -121,7 +121,7 @@ function get_learboard_data()
       if(data_block['Date of Examination'] == dates[i].id)
       {
         values['title'] = data_block['Exam Subject'];
-        values['fmarks'] = data_block['Full Marks of the test '];
+        values['fmarks'] = data_block['Full Marks of the test'];
         if (values['topmarks'] < data_block['Marks obtained']) 
         {
           values['topmarks'] = data_block['Marks obtained'];
