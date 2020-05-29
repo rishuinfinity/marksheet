@@ -62,7 +62,7 @@ function get_data(){
   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQDrSrHISpfjthbDhed0Yd42LSAG2wApNIzxdTIolFDDEWmZG6Dau-cLe3Nv0mh6VyXqS8f_qYlUw3a/pub?output=csv";
   // fetch(url).then(a => a.text() ).then(t=>csv_file = t);
   csv_file = gfile(url);
-  console.log(csv_file);
+  // console.log(csv_file);
   var object_file = csvJSON(csv_file);
   var json_file = JSON.stringify(object_file);
   return object_file;
@@ -140,13 +140,13 @@ console.log(box_id);
   var box = document.getElementById(box_id);
   var dates = get_date_array();
   var storage = get_learboard_data();
+  console.log(storage);
   for( var i = 0 ; i < 7 ; i++)
   {
     var today = dates[i];
     var todata = storage[i];
     box.innerHTML +=  fill_leaderboard(today.day,today.date,todata.title,todata.fmarks,todata.topper,todata.tmarks);
   }  
-  console.log(get_data());
 };
 
 function fill_leaderboard(day,date,title,fmarks,topper,tmarks)
