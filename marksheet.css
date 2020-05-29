@@ -1,0 +1,156 @@
+body{
+  background-color: #002967;
+  padding-top: 0em;
+
+}
+.hd{
+  margin-top: 0em;
+  font-size: 10vw;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0vw;
+  font-family: 'Alfa Slab One' ;
+}
+.lb{
+  font-size: 6vw;
+  text-align: center;
+  color:#456391;
+   margin-bottom: 1vw;
+}
+hr{
+  height: .1em;
+  width: 31vw;
+  margin-bottom: 0em;
+  background-color: white;
+  margin-top: 0;
+  padding-top: 0vw;
+  padding-bottom: 0em;
+}
+.main{
+  background-color: white;
+  color: #002967;
+  margin-bottom: 0px;
+  margin-top: 0vw;
+}
+.topic{
+  text-align: left;
+  font-size: 9vw;
+  padding-left: .5em;
+}
+.day{
+  text-align: left;
+  font-size: 5.5vw;
+  padding-left: .8em;
+}
+.fm{
+  text-align: right;
+  font-size: 5.5vw;
+}
+.data{
+  background-color:#003480;
+  color: white;
+  font-size: 5vw;
+}
+
+.name1,.name2,.name3,.name4,.name5,.name6{
+  text-align: left;
+}
+.mark1,.mark2,.mark3,.mark4,.mark5,.mark6{
+  text-align: right;
+}
+.l1{
+margin-right: 0;
+margin-left: 0;
+width: 90vw;
+height:1px;
+}
+.data1,.data2,.data3,.data4,.data5,.data6{
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 1.5vw;
+}
+@media only screen and (min-width: 576px)   {
+  .data{
+    font-size: 3vw;
+  }
+  .topic{
+    font-size: 6vw;
+  }
+  .hd{
+    font-size: 8vw;
+  }
+  .lb{
+    font-size: 5vw;
+  }
+  .day,.fm{
+    font-size: 5vw;
+  }
+}
+@media only screen and (min-width: 768px){
+  .data{
+    font-size: 2.5vw;
+  }
+  .topic{
+    font-size: 5vw;
+  }
+  .hd{
+    font-size: 8vw;
+  }
+  .lb{
+    font-size: 5vw;
+  }
+  .day,.fm{
+    font-size: 4vw;
+}
+@media only screen and (min-width: 845px) and (max-width:992px){
+  .data{
+    font-size: 2.2vw;
+  }
+  .topic{
+    font-size: 4.5vw;
+  }
+  .hd{
+    font-size: 7vw;
+  }
+  .lb{
+    font-size: 4vw;
+  }
+  .day,.fm{
+    font-size: 3.6vw;
+}
+   }
+@media only screen and (min-width: 992px){
+  .data{
+    font-size: 2.5vw;
+  }
+  .topic{
+    font-size: 4vw;
+  }
+  .hd{
+    font-size: 6vw;
+  }
+  .lb{
+    font-size: 4.5vw;
+  }
+  .day,.fm{
+    font-size: 3vw;
+}
+    }
+    @media only screen and (min-width: 1200px){
+      .data{
+        font-size: 2.1vw;
+      }
+      .topic{
+        font-size: 2.9vw;
+      }
+      .hd{
+        font-size: 5vw;
+      }
+      .lb{
+        font-size: 3.8vw;
+      }
+      .day,.fm{
+        font-size: 2.4vw;
+    }
+        }

@@ -1,0 +1,159 @@
+body{
+  background-color: #002967;
+  padding-top: 0em;
+
+}
+.hd{
+  margin-top: 0em;
+  font-size: 8vw;
+  color: white;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0vw;
+    font-family: 'Alfa Slab One' ;
+}
+.lb{
+  font-size: 5vw;
+  text-align: center;
+  color:#456391;
+
+}
+hr{
+  height: .1em;
+  width: 30vw;
+  margin-bottom: .2em;
+  background-color: white;
+  margin-top: 0;
+  padding-top: 0vw;
+}
+.weekd,.weekd1,.weekd2,.weekd3,.weekd4,.weekd5,.weekd6{
+
+  background-color:#002967;
+  border-radius: 1em;
+  width: 10em;
+  height: 7em;
+  font-size: 4vw;
+  margin-top: .5em;
+  padding-bottom: .3em;
+  padding-top: .2em;
+  box-shadow:0px 0px 3px 3px black;
+  margin-bottom: 15px;
+   padding-left: .8em;
+   padding-right: .8em;
+}
+.r1{
+  margin-top: .2em;
+  font-size:.8em;
+  color: white;
+  margin-bottom: .2em;
+}
+.date,.date1,.date2,.date3,.date4,.date5,.date6{
+  font-size: 1em;
+  text-align:right;
+}
+.day,.day1,.day2,.day3,.day4,.day5,.day6{
+  font-size: 1em;
+  text-align: left;
+}
+.r2{
+  font-size: 1em;
+  margin-top: .1em;
+  margin-bottom: .1em;
+}
+.topicname,.topicname1,.topicname2,.topicname3,.topicname4,.topicname5,.topicname6{
+  font-size: 1.3em;
+  color: white;
+  text-align: left;
+}
+.fm,.fm1,.fm2,.fm3,.fm4,.fm5,.fm6{
+  background-color:#002967;
+  display: inline-block;
+  margin-top: .3em;
+}
+.fmi,.fmi1,.fmi2,.fmi3,.fmi4,.fmi5,.fmi6{
+  background-color: white;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  font-size: 2vw;
+  text-align: center;
+  padding-top: .7em;
+  float:right;
+}
+.r3{
+  margin-left: .1em;
+  margin-right: .1em;
+  border-radius: 2vw;
+  background-color: white;
+  margin-bottom: 1em;;
+  font-size: 3.5vw;
+  margin-top: 2.8vw;
+  padding-top: .5vw;
+  padding-right: 1.2vw;
+  padding-bottom: .3em;
+}
+.marks,.marks1,.marks2,.marks3,.marks4,.marks5,.marks6 {
+  text-align: right;
+}
+@media only screen and (min-width: 700px) {
+  .weekd,.weekd1,.weekd2,.weekd3,.weekd4,.weekd5,.weekd6{
+  font-size: 1.3em;
+  }
+  .r3{
+    font-size: 1em;;
+    margin-top: 1vw;
+
+  }
+  .fmi,.fmi1,.fmi2,.fmi3,.fmi4,.fmi5,.fmi6{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    font-size: 1.5vw;
+    padding-top: .5vw;
+    text-align: center;
+  }
+  .r2{
+    margin-bottom: 0px;
+  }
+  .hd{
+    font-size: 300%;
+  }
+  hr{
+    width:20vw;
+  }
+  .lb{
+    font-size: 3vw;
+  }
+}
+@media only screen and (max-width: 250px) {
+  .r3 {
+  font-size: 3vw;
+  }
+.marks,.marks1,.marks2,.marks3,.marks4,.marks5,.marks6{
+    text-align: right;
+    padding-left: 0vw;
+  }
+  .weekd,.weekd1,.weekd2,.weekd3,.weekd4,.weekd5,.weekd6{
+    font-size: 5vw;
+  }
+}
+@media only screen and (max-width: 700px) and (min-width:600px) {
+  .weekd,.weekd1,.weekd2,.weekd3,.weekd4,.weekd5,.weekd6{
+  font-size: 1.3em;
+
+  }
+   .r3{
+     font-size: .8em;
+   }
+}
+@media only screen and (min-width: 1400px){
+  .weekd,.weekd1,.weekd2,.weekd3,.weekd4,.weekd5,.weekd6{
+    font-size: 2vw;
+  }
+  .hd{
+    font-size:5vw;;
+  }
+  .r3{
+    font-size:2vw;
+  }
+}
