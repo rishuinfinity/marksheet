@@ -100,7 +100,7 @@ function get_date_array()
     var date_obj = {};
     date_obj['day'] = days[dater.getDay()] ;
     date_obj['date'] = dater.getDate() + months[dater.getMonth()];
-    date_obj['id'] = dater.getMonth + "/" + dater.getDate;
+    date_obj['id'] = dater.getMonth()+1 + "/" + dater.getDate();
     Dates.push(date_obj);
   }
   return Dates;
