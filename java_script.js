@@ -190,7 +190,7 @@ function get_marksheet_data(date_id)
   {
     var values = {};
     data_block = data[index]
-    if(data_block['Date of Examination'] == dates[i].id)
+    if(data_block['Date of Examination'] == date_id)
     {
       title = data_block['Exam Subject'];
       fmarks = data_block['Full Marks of the test'];
