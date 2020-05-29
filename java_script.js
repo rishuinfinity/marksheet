@@ -68,6 +68,7 @@ function get_data(){
   return object_file;
 };
 function gfile(url){
+  var csv_data;
     $.ajax({
         async:false,
         url: url,
@@ -75,15 +76,15 @@ function gfile(url){
         type: 'GET',
         crossDomain : true,
         success: function(data, textStatus, jqXHR){
-            console.log(data);
-            return data;
+            // console.log(data);
+            csv_data = data;
         },
         error: function(XMLHttpRequest, textStatus, errorThrown){
             console.log("error occured");
-            return null;
+            csv_data = "not,found";
         }
     });
-    
+    return csv_data;
 };
 // code for the leaderboard
 function get_date_array()
