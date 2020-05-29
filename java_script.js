@@ -114,13 +114,13 @@ function get_learboard_data()
   for(var i = 0 ; i < 7 ; i++)
   {
     var values = {};
-    for (var data_block in data)
+    for (var index in data)
     {
-      console.log(data_block);
+      data_block = data[index]
       if(data_block['Date of Examination'] == dates[i].id)
       {
         values[title] = data_block['Examination Subject'];
-        values[fmarks] = data_block['Full Marks of the test'];
+        values[fmarks] = data_block['Full Marks of the test '];
         if (values[topmarks] < data_block['Marks obtained']) 
         {
           values[topmarks] = data_block['Marks obtained'];
@@ -136,6 +136,7 @@ function get_learboard_data()
 
 function update_leaderboard(box_id){
 // this updates the leaderboard at once
+console.log(box_id);
   var box = document.getElementById(box_id);
   var dates = get_date_array();
   var storage = get_learboard_data();
