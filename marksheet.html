@@ -16,7 +16,6 @@
         </div>
         <div class="col-sm-4 col-8 col-md-4 hd">
           MS30
-         <hr>
         </div>
         <div class="col-sm-4 col-2 col-md-4  ">
         </div>
@@ -31,31 +30,27 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-2 col-1 col-md-2 col-lg-3">
-        </div>
-        <div class="col-sm-8 col-10 col-md-8 col-lg-6 main">
+        <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 main">
          <div class="row r1">
-           <div class="col-sm-12 col-12 topic">
+           <div class="col-sm-12 col-12 topic" id  = "title">
              Hydrocarbon
            </div>
          </div>
          <div class="row r2">
-           <div class="col-6 col-sm-6 day">
+           <div class="col-6 col-sm-6 day" id = "date">
              21 May
            </div>
-           <div class="col-6 col-sm-6 fm">
+           <div class="col-6 col-sm-6 fm" id = "fmarks">
              FM: 96
            </div>
          </div>
         </div>
-        <div class="col-sm-2 col-1 col-md-2 col-lg-3">
-        </div>
       </div>
       <div class="row sheet ">
-       <div class=" col-sm-2 col-1 col-md-2 col-lg-3">
-       </div>
-       <div class="col-sm-8 col-10 col-md-8 data col-lg-6">
-         <div class="row data1">
+       <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-8 offset-md-2 col-lg-6 offset-lg-3 data" id = "data_list">
+        
+
+        <div class="row data1">
            <div class="col-8 col-sm-8 name1">
              Anddybondy
            </div>
@@ -63,54 +58,9 @@
              69(2)
            </div>
            <hr class = "l1">
-         </div>
-         <div class="row data2">
-           <div class="col-8 col-sm-8 name2">
-             Anddybondy
-           </div>
-           <div class="col-4 col-sm-4 mark2">
-             69(2)
-           </div>
-           <hr class = "l1">
-         </div>
-         <div class="row data3">
-           <div class="col-8 col-sm-8 name3">
-             Anddybondy
-           </div>
-           <div class="col-4 col-sm-4 mark3">
-             69(2)
-           </div>
-           <hr class = "l1">
-         </div>
-         <div class="row data4">
-           <div class="col-8 col-sm-8 name4">
-             Anddybondy
-           </div>
-           <div class="col-4 col-sm-4 mark4">
-             69(2)
-           </div>
-           <hr class = "l1">
-         </div>
-         <div class="row data5">
-           <div class="col-8 col-sm-8 name5">
-             Anddybondy
-           </div>
-           <div class="col-4 col-sm-4 mark5">
-             69(2)
-           </div>
-           <hr class = "l1">
-         </div>
-         <div class="row data6">
-           <div class="col-8 col-sm-8 name6">
-             Anddybondy
-           </div>
-           <div class="col-4 col-sm-4 mark6">
-             69(2)
-           </div>
-           <hr class = "l1">
-         </div>
-       </div>
-       <div class="col-sm-2 col-1 col-md-2 col-lg-3">
+        </div>
+
+
        </div>
       </div>
     </div>
@@ -120,7 +70,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src= "java_script.js">   
+    <script type="text/javascript" src= "java_script.js">   </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+      let params = new URLSearchParams(location.search);
+      var dt = params.get('date');
+      console.log(dt);
+      update_marksheet(dt,"data_list");
     </script>
 
   </body>

@@ -86,6 +86,11 @@ function gfile(url){
     });
     return csv_data;
 };
+
+
+
+
+
 // code for the leaderboard
 function get_date_array()
 {
@@ -146,14 +151,14 @@ console.log(box_id);
   {
     var today = dates[i];
     var todata = storage[i];
-    box.innerHTML +=  fill_leaderboard(today.day,today.date,todata.title,todata.fmarks,todata.topper,todata.tmarks);
+    box.innerHTML +=  fill_leaderboard(today.id,today.day,today.date,todata.title,todata.fmarks,todata.topper,todata.tmarks);
   }  
 };
 
-function fill_leaderboard(day,date,title,fmarks,topper,tmarks)
+function fill_leaderboard(link,day,date,title,fmarks,topper,tmarks)
 {
   // this returns the html code to fill inside leaderboard
-  var row_data = '<div class="row"><!-- main box --><div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 weekd"><div class="row r1 "><div id="d1" class="col-sm-8 col-8 day">'+
+  var row_data = '<a href = "./marksheet.html?date ='+link+' " ><div class="row"><!-- main box --><div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 weekd"><div class="row r1 "><div id="d1" class="col-sm-8 col-8 day">'+
             day+
           '</div><div id="dt1" class="col-sm-4 col-4 date">'+
             date+
@@ -167,6 +172,64 @@ function fill_leaderboard(day,date,title,fmarks,topper,tmarks)
             topper+
            '</div><div id="m1" class="col-md-6 col-3 marks">'+
             tmarks+
-           '</div></div></div></div>';
+           '</div></div></div></div></a>';
   return row_data;
 };
+
+
+
+// code for marksheet
+function get_marksheet_data(date_id)
+{
+  var dates = get_date_array();
+  var data = get_data();
+  var storage = [];
+  var title;
+  var fmarks;
+  for (var index in data)
+  {
+    var values = {};
+    data_block = data[index]
+    if(data_block['Date of Examination'] == dates[i].id)
+    {
+      title = data_block['Exam Subject'];
+      fmarks = data_block['Full Marks of the test'];
+      values['marks'] = data_block['Marks obtained'];
+      values['name'] = data_block['Your Name'];
+      values['omarks'] = data_block['Marks obtained'] + "(" + data_block['Negatives'] + ")";
+      storage.push(values);
+    }
+  }
+  var vals = [];
+  vals.push(title);
+  vals.push(fmarks);
+  vals.push(storage);
+  return storage;
+};
+
+function update_marksheet(date_id,data_list)
+{
+  var values = get_marksheet_data(date_id);
+  var title = values[0];
+  var fmarks = values[1];
+  var storage = values[2];
+  document.getElementById('title').innerHTML = title;
+  document.getElementById('fmarks').innerHTML = "FM : "+ fmarks;
+  document.getElementById('date').innerHTML = date_id;
+
+  for (var index in storage)
+  {
+    data_block = storage[i];
+    document.getElementById(data_list).innerHTML+= fill_marksheet(data_block.name , data_block.omarks);
+  }
+}
+
+function fill_marksheet(name,omarks)
+{
+  var code = '<div class="row data1"><div class="col-8 col-sm-8 name1">'+
+             name+
+           '</div><div class="col-4 col-sm-4 mark1">'
+             omarks+
+           '</div><hr class = "l1"></div>';
+  return code;
+}
