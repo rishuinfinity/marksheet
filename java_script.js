@@ -116,7 +116,7 @@ function get_learboard_data()
     var values = {};
     for (var data_block in data)
     {
-      console.log(data_block["Date of Examination"]);
+      console.log(data_block);
       if(data_block['Date of Examination'] == dates[i].id)
       {
         values[title] = data_block['Examination Subject'];
