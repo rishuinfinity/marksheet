@@ -97,16 +97,16 @@ function get_learboard_data()
     var values = {};
     for (var data_block in data)
     {
-      console.log(data_block.["Date of Examination"]);
-      if(data_block.['Date of Examination'] == dates[i].id)
+      console.log(data_block["Date of Examination"]);
+      if(data_block['Date of Examination'] == dates[i].id)
       {
-        values[title] = data_block.['Examination Subject'];
-        values[fmarks] = data_block.['Full Marks of the test'];
-        if (values[topmarks] < data_block.['Marks obtained']) 
+        values[title] = data_block['Examination Subject'];
+        values[fmarks] = data_block['Full Marks of the test'];
+        if (values[topmarks] < data_block['Marks obtained']) 
         {
-          values[topmarks] = data_block.['Marks obtained'];
-          values[topper] = data_block.['Your Name'];
-          values[tmarks] = data_block.['Marks obtained'] + "(" + data_block.['Negatives'] + ")";
+          values[topmarks] = data_block['Marks obtained'];
+          values[topper] = data_block['Your Name'];
+          values[tmarks] = data_block['Marks obtained'] + "(" + data_block['Negatives'] + ")";
         }
       }
       storage.push(values);
