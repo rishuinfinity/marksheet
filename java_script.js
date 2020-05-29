@@ -158,7 +158,7 @@ console.log(box_id);
 function fill_leaderboard(link,day,date,title,fmarks,topper,tmarks)
 {
   // this returns the html code to fill inside leaderboard
-  var row_data = '<a href = "./marksheet.html?date ="'+link+'" " ><div class="row"><!-- main box --><div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 weekd"><div class="row r1 "><div id="d1" class="col-sm-8 col-8 day">'+
+  var row_data = '<a href = "./marksheet.html?date = \''+link+'\' " ><div class="row"><!-- main box --><div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 weekd"><div class="row r1 "><div id="d1" class="col-sm-8 col-8 day">'+
             day+
           '</div><div id="dt1" class="col-sm-4 col-4 date">'+
             date+
