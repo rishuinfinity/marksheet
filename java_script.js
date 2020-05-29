@@ -114,6 +114,7 @@ function get_learboard_data()
   for(var i = 0 ; i < 7 ; i++)
   {
     var values = {};
+    values[topmarks] = 0;
     for (var index in data)
     {
       data_block = data[index]
@@ -128,8 +129,8 @@ function get_learboard_data()
           values[tmarks] = data_block['Marks obtained'] + "(" + data_block['Negatives'] + ")";
         }
       }
-      storage.push(values);
     }
+    storage.push(values);
   }
   return storage;
 };
