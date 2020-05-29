@@ -61,14 +61,30 @@ function get_data(){
   var csv_file;
   var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQDrSrHISpfjthbDhed0Yd42LSAG2wApNIzxdTIolFDDEWmZG6Dau-cLe3Nv0mh6VyXqS8f_qYlUw3a/pub?output=csv";
   // fetch(url).then(a => a.text() ).then(t=>csv_file = t);
-  var response = await fetch(url);
-  csv_file = await response.text();
+  csv_file = gfile(url);
   console.log(csv_file);
   var object_file = csvJSON(csv_file);
   var json_file = JSON.stringify(object_file);
   return object_file;
 };
-
+function gfile(url){
+    $.ajax({
+        async:false,
+        url: url,
+        dataType: 'text',
+        type: 'GET',
+        crossDomain : true,
+        success: function(data, textStatus, jqXHR){
+            console.log(data);
+            return data;
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown){
+            console.log("error occured");
+            return null;
+        }
+    });
+    
+};
 // code for the leaderboard
 function get_date_array()
 {
