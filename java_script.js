@@ -257,7 +257,6 @@ if(a.marks < b.marks)
     return 1;
   }
   return 0;  
-    }
 });
 	console.log(storage);
   document.getElementById('title').innerHTML = title;
