@@ -1,21 +1,34 @@
+/*---------------------------------------------*/
+/*Color codings*/
+/*---------------------------------------------*/
+:root {
+  --c_white:#fff;
+  --c_black:#000;
+  --c_blue_dark:#002a68;
+  --c_blue_main:#003380;
+  --c_blue_light:#87aade;
+
+}
+
 body{
-  background-color: #002967;
+  background-color: var(--c_blue_dark);
   padding-top: 0em;
+  font-family: sans-serif;
 
 }
 .hd{
   margin-top: 0em;
   font-size: 8vw;
-  color: white;
+  color: var(--c_white);
   text-align: center;
   margin-bottom: 0;
   padding-bottom: 0vw;
-    font-family: 'Alfa Slab One' ;
 }
 .lb{
   font-size: 5vw;
   text-align: center;
-  color:#456391;
+  color:var(--c_blue_light);
+  font-family: 'Teko', sans-serif;
 
 }
 hr{
@@ -26,8 +39,7 @@ hr{
   margin-top: 0;
   padding-top: 0vw;
 }
-.weekd,.weekd1,.weekd2,.weekd3,.weekd4,.weekd5,.weekd6{
-
+.weekd{
   background-color:#002967;
   border-radius: 1em;
   width: 10em;
@@ -47,11 +59,11 @@ hr{
   color: white;
   margin-bottom: .2em;
 }
-.date,.date1,.date2,.date3,.date4,.date5,.date6{
+.date{
   font-size: 1em;
   text-align:right;
 }
-.day,.day1,.day2,.day3,.day4,.day5,.day6{
+.day{
   font-size: 1em;
   text-align: left;
 }
@@ -60,17 +72,17 @@ hr{
   margin-top: .1em;
   margin-bottom: .1em;
 }
-.topicname,.topicname1,.topicname2,.topicname3,.topicname4,.topicname5,.topicname6{
+.topicname{
   font-size: 1.3em;
   color: white;
   text-align: left;
 }
-.fm,.fm1,.fm2,.fm3,.fm4,.fm5,.fm6{
+.fm{
   background-color:#002967;
   display: inline-block;
   margin-top: .3em;
 }
-.fmi,.fmi1,.fmi2,.fmi3,.fmi4,.fmi5,.fmi6{
+.fmi{
   background-color: white;
   height: 3em;
   width: 3em;
@@ -92,68 +104,6 @@ hr{
   padding-right: 1.2vw;
   padding-bottom: .3em;
 }
-.marks,.marks1,.marks2,.marks3,.marks4,.marks5,.marks6 {
+.marks {
   text-align: right;
-}
-@media only screen and (min-width: 700px) {
-  .weekd,.weekd1,.weekd2,.weekd3,.weekd4,.weekd5,.weekd6{
-  font-size: 1.3em;
-  }
-  .r3{
-    font-size: 1em;;
-    margin-top: 1vw;
-
-  }
-  .fmi,.fmi1,.fmi2,.fmi3,.fmi4,.fmi5,.fmi6{
-    width: 2em;
-    height: 2em;
-    border-radius: 50%;
-    font-size: 1.5vw;
-    padding-top: .5vw;
-    text-align: center;
-  }
-  .r2{
-    margin-bottom: 0px;
-  }
-  .hd{
-    font-size: 300%;
-  }
-  hr{
-    width:20vw;
-  }
-  .lb{
-    font-size: 3vw;
-  }
-}
-@media only screen and (max-width: 250px) {
-  .r3 {
-  font-size: 3vw;
-  }
-.marks,.marks1,.marks2,.marks3,.marks4,.marks5,.marks6{
-    text-align: right;
-    padding-left: 0vw;
-  }
-  .weekd,.weekd1,.weekd2,.weekd3,.weekd4,.weekd5,.weekd6{
-    font-size: 5vw;
-  }
-}
-@media only screen and (max-width: 700px) and (min-width:600px) {
-  .weekd,.weekd1,.weekd2,.weekd3,.weekd4,.weekd5,.weekd6{
-  font-size: 1.3em;
-
-  }
-   .r3{
-     font-size: .8em;
-   }
-}
-@media only screen and (min-width: 1400px){
-  .weekd,.weekd1,.weekd2,.weekd3,.weekd4,.weekd5,.weekd6{
-    font-size: 2vw;
-  }
-  .hd{
-    font-size:5vw;;
-  }
-  .r3{
-    font-size:2vw;
-  }
 }
