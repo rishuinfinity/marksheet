@@ -170,7 +170,7 @@ function fill_leaderboard(link,day,date,title,fmarks,topper,tmarks)
             '</div></div></div>'+
         '<div class="row r3"><div id="n1" class="col-auto name">'+
             topper+
-           '</div><div id="m1" class="col-auto marks">'+
+           '</div><div id="m1" class="col marks">'+
             tmarks+
            '</div></div></div></div></a>';
   return row_data;
