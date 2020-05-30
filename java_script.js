@@ -202,7 +202,7 @@ function get_marksheet_data(date_id)
   }
   var vals = [];
   vals.push(title);
-  )vals.push(fmarks);
+  vals.push(fmarks);
   vals.push(storage);
   return vals;
 };
