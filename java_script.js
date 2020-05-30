@@ -238,7 +238,27 @@ function update_marksheet(date_id,data_list)
   var fmarks = values[1];
   var storage = values[2];
 	console.log(storage);
-  storage.sort(marks_comparator());
+//   storage.sort(marks_comparator());
+storage.sort(function(a,b){
+if(a.marks < b.marks)
+  {
+    return 1;
+  }
+  if(a.marks > b.marks)
+  {
+    return -1;
+  }
+  if(a.omarks < b.omarks)
+  {
+    return -1;
+  }
+  if(a.omarks > b.omarks)
+  {
+    return 1;
+  }
+  return 0;  
+    }
+});
 	console.log(storage);
   document.getElementById('title').innerHTML = title;
   document.getElementById('fmarks').innerHTML = "FM : "+ fmarks;
