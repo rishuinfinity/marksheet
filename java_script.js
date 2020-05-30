@@ -168,9 +168,9 @@ function fill_leaderboard(link,day,date,title,fmarks,topper,tmarks)
           '</div><div class="col-sm-3 col-3 fm"><div id="f1" class="fmi">'+
             fmarks+
             '</div></div></div>'+
-        '<div class="row r3"><div id="n1" class="col-md-6 col-9 name">'+
+        '<div class="row r3"><div id="n1" class="col name">'+
             topper+
-           '</div><div id="m1" class="col-md-6 col-3 marks">'+
+           '</div><div id="m1" class="col marks">'+
             tmarks+
            '</div></div></div></div></a>';
   return row_data;
