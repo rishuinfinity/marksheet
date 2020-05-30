@@ -151,3 +151,8 @@ a:hover{
 .weekd:hover, .data1:hover{
   background-color:#29711a;
 }
+@media screen and(max-width: 300px)
+  {
+    body{
+      min-width: 300px;
+      overflow-x:auto;
