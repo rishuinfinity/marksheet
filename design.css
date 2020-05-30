@@ -129,3 +129,20 @@ a:hover{
 .mark1{
   text-align:right;
 }
+
+
+/*some size manipulations*/
+
+@media screen and (min-width: 480px) {
+  .hd{
+    font-size: 7rem;
+  }
+  .fmi{
+    line-height: 1;
+  }
+}
+
+/*some hovering effects*/
+.weekd:hover, .data1:hover{
+  background-color:#29711a;
+}
