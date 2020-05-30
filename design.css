@@ -1,0 +1,131 @@
+/*---------------------------------------------*/
+/*Color codings*/
+/*---------------------------------------------*/
+:root {
+  --c_white:#fff;
+  --c_black:#000;
+  --c_blue_dark:#002a68;
+  --c_blue_main:#003380;
+  --c_blue_light:#87aade;
+  --c_text_hover:#adb5bd;
+
+}
+
+body{
+  background-color: var(--c_blue_dark);
+  padding-top: 0em;
+  font-family: sans-serif;
+  text-align:center;
+  font-size: 20px;
+}
+
+a{
+  text-decoration:none; 
+}
+a:hover{
+  text-decoration:none;
+  color:var(--c_text_hover);
+
+}
+
+/* head title */
+.hd{
+  color:var(--c_white);
+  font-weight:900;
+  font-size:120px;
+  padding:0;
+}
+.hd span{
+  border-bottom:5px solid white;
+}
+
+/* title */
+.lb{
+  color:var(--c_blue_light);
+  font-family: 'Teko', sans-serif;
+  font-weight:600;
+  font-size:22px;
+  margin-bottom:50px;
+  letter-spacing:1px;
+}
+
+/* leaderboards */
+.weekd{
+  background-color:var(--c_blue_main);
+  margin-bottom:50px;
+  border-radius:12px;
+  box-shadow:0 0 14px 0px #000000d9;
+  padding:20px;
+}
+.weekd .r1{
+  color:var(--c_blue_light);
+}
+.day, .topicname, .name{
+  text-align:left;
+}
+.date, .fmi, .marks{
+  text-align:right;
+}
+.weekd .r2{
+  color:var(--c_white);
+}
+.weekd .r3{
+  color:var(--c_blue_dark);
+  background-color:var(--c_white);
+  border-radius:12px;
+  padding:10px;
+  margin:1px;
+}
+.topicname{
+  font-size:170%;
+  font-weight:900;
+}
+.fmi{
+  background-color: var(--c_blue_light);
+  color:var(--c_blue_dark);
+  margin:0px;
+  width:50%;
+  min-width:40px;
+  min-height:40px;
+  height:0;
+  font-size:20px;
+  text-align:center;
+  line-height:0;
+  padding:25% 0;
+  border-radius:50%;
+  float:right;
+}
+
+/* marksheet design */
+
+.main{
+  background-color:var(--c_white);
+  color:var(--c_blue_dark);
+  border-radius: 12px 12px 0px 0px ;
+  text-align:left;
+  font-size:120%;
+  padding:20px;
+  box-shadow:0px 0px 8px 2px #0000007a; 
+}
+.fmarks{
+  text-align:right;
+}
+.topic{
+  font-size:35px;
+  font-weight:900;
+  text-align:center;
+}
+
+.data1{
+  background-color:var(--c_blue_main);
+  color:white;
+  margin-top:10px;
+  padding:10px;
+  text-align:left;
+  border-bottom:2px solid  var(--c_blue_light);
+  border-radius:7px 7px 0 0 ;
+  box-shadow:0px 0px 8px 2px #0000007a; 
+}
+.mark1{
+  text-align:right;
+}

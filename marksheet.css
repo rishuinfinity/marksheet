@@ -1,3 +1,14 @@
+/*---------------------------------------------*/
+/*Color codings*/
+/*---------------------------------------------*/
+:root {
+  --c_white:#fff;
+  --c_black:#000;
+  --c_blue_dark:#002a68;
+  --c_blue_main:#003380;
+  --c_blue_light:#87aade;
+
+}
 .main{
   background-color: white;
   color: #002967;
@@ -8,6 +19,7 @@
   text-align: left;
   font-size: 9vw;
   padding-left: .5em;
+  color: var(--c_blue_dark);
 }
 .dayndate{
   text-align: left;
