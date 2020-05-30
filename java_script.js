@@ -194,7 +194,7 @@ function get_marksheet_data(date_id)
     {
       title = data_block['Exam Subject'];
       fmarks = data_block['Full Marks of the test'];
-      values['marks'] = data_block['Marks obtained'];
+      values['marks'] = Number(data_block['Marks obtained'];
       values['name'] = data_block['Your Name'];
       values['omarks'] = data_block['Marks obtained'] + "(" + data_block['Negatives'] + ")";
       storage.push(values);
@@ -202,7 +202,7 @@ function get_marksheet_data(date_id)
   }
   var vals = [];
   vals.push(title);
-  vals.push(fmarks);
+  )vals.push(fmarks);
   vals.push(storage);
   return vals;
 };
