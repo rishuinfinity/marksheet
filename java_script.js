@@ -129,7 +129,7 @@ function get_learboard_data()
         values['fmarks'] = data_block['Full Marks of the test'];
         if (values['topmarks'] < data_block['Marks obtained']) 
         {
-          values['topmarks'] = data_block['Marks obtained'];
+          values['topmarks'] = Number(data_block['Marks obtained']);
           values['topper'] = data_block['Your Name'];
           values['tmarks'] = data_block['Marks obtained'] + "(" + data_block['Negatives'] + ")";
         }
@@ -194,7 +194,7 @@ function get_marksheet_data(date_id)
     {
       title = data_block['Exam Subject'];
       fmarks = data_block['Full Marks of the test'];
-      values['marks'] = Number(data_block['Marks obtained']);
+      values['marks'] = data_block['Marks obtained'];
       values['name'] = data_block['Your Name'];
       values['omarks'] = data_block['Marks obtained'] + "(" + data_block['Negatives'] + ")";
       storage.push(values);
