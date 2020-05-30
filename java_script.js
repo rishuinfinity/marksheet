@@ -237,7 +237,9 @@ function update_marksheet(date_id,data_list)
   var title = values[0];
   var fmarks = values[1];
   var storage = values[2];
+	console.log(storage);
   storage.sort(marks_comparator());
+	console.log(storage);
   document.getElementById('title').innerHTML = title;
   document.getElementById('fmarks').innerHTML = "FM : "+ fmarks;
   document.getElementById('date').innerHTML = date_id;
