@@ -212,19 +212,19 @@ function marks_comparator()
   return function(kid1,kid2) {    
         if(kid1.marks < kid2.marks)
   {
-    return -1;
+    return 1;
   }
   if(kid1.marks > kid2.marks)
   {
-    return 1;
+    return -1;
   }
   if(kid1.omarks < kid2.omarks)
   {
-    return 1;
+    return -1;
   }
   if(kid1.omarks > kid2.omarks)
   {
-    return -1;
+    return 1;
   }
   return 0;  
     }
