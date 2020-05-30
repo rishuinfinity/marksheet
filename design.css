@@ -156,3 +156,8 @@ a:hover{
     body{
       min-width: 300px;
       overflow-x:auto;
+    }
+    .hd{
+      font-size: 5rem;
+    }
+}
