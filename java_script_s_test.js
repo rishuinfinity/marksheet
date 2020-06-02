@@ -1,4 +1,35 @@
 
+//document.write(ff);
+//document.write(gg);
+
+    
+// function csvToArray (csv) {
+//     rows = csv.split("\n");
+
+//     return rows.map(function (row) {
+//      return row.split(",");
+//     });
+// };
+    
+//     function processData(allText) {
+//     var allTextLines = allText.split(/\r\n|\n/);
+//     var headers = allTextLines[0].split(',');
+//     var lines = [];
+
+//     for (var i=1; i<allTextLines.length; i++) {
+//         var data = allTextLines[i].split(',');
+//         if (data.length == headers.length) {
+
+//             var tarr = [];
+//             for (var j=0; j<headers.length; j++) {
+//                 tarr.push(headers[j]+":"+data[j]);
+//             }
+//             lines.push(tarr);
+//         }
+//     }
+//      //log(lines);
+//      return lines;
+// }
 function csvJSON(csv){
 // this converts csv file to json file
   var lines=csv.split("\n");
@@ -9,14 +40,14 @@ function csvJSON(csv){
 
   for(var i=1;i<lines.length;i++){
 
-	  var obj = {};
-	  var currentline=lines[i].split(",");
+    var obj = {};
+    var currentline=lines[i].split(",");
 
-	  for(var j=0;j<headers.length;j++){
-		  obj[headers[j]] = currentline[j];
-	  }
+    for(var j=0;j<headers.length;j++){
+      obj[headers[j]] = currentline[j];
+    }
 
-	  result.push(obj);
+    result.push(obj);
 
   }
   
@@ -127,7 +158,7 @@ console.log(box_id);
 function fill_leaderboard(link,day,date,title,fmarks,topper,tmarks)
 {
   // this returns the html code to fill inside leaderboard
-  var row_data = '<a href = "./marksheet_s_test.html?date='+link+'" ><div class="row"><!-- main box --><div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 weekd"><div class="row r1 "><div id="d1" class="col-sm-8 col-8 day">'+
+  var row_data = '<a href = "./marksheet.html?date='+link+'" ><div class="row"><!-- main box --><div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 weekd"><div class="row r1 "><div id="d1" class="col-sm-8 col-8 day">'+
             day+
           '</div><div id="dt1" class="col-sm-4 col-4 date">'+
             date+
@@ -166,6 +197,7 @@ function get_marksheet_data(date_id)
       values['marks'] = data_block['Marks obtained'];
       values['name'] = data_block['Your Name'];
       values['omarks'] = data_block['Marks obtained'] + "(" + data_block['Negatives'] + ")";
+      values['Negatives'] = data_block['Negatives'];
       storage.push(values);
     }
   }
@@ -182,7 +214,17 @@ function update_marksheet(date_id,data_list)
   var title = values[0];
   var fmarks = values[1];
   var storage = values[2];
-  storage.sort(function(a,b){return b.marks-a.marks;});
+  console.log(storage);
+  storage.sort(function(x,y) {
+    if(y.marks != x.marks)
+    {
+      return y.marks - x.marks;
+    }
+    else
+    {
+      return x.Negatives - y.Negatives;
+    }
+    });
   console.log(storage);
   console.log(title);
   document.getElementById('title').innerHTML = title;
@@ -205,3 +247,36 @@ function fill_marksheet(name,omarks)
            '</div><hr class = "l1"></div>';
   return code;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

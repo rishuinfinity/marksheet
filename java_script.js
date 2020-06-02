@@ -7,7 +7,7 @@
 //     rows = csv.split("\n");
 
 //     return rows.map(function (row) {
-//     	return row.split(",");
+//      return row.split(",");
 //     });
 // };
     
@@ -40,14 +40,14 @@ function csvJSON(csv){
 
   for(var i=1;i<lines.length;i++){
 
-	  var obj = {};
-	  var currentline=lines[i].split(",");
+    var obj = {};
+    var currentline=lines[i].split(",");
 
-	  for(var j=0;j<headers.length;j++){
-		  obj[headers[j]] = currentline[j];
-	  }
+    for(var j=0;j<headers.length;j++){
+      obj[headers[j]] = currentline[j];
+    }
 
-	  result.push(obj);
+    result.push(obj);
 
   }
   
@@ -192,11 +192,12 @@ function get_marksheet_data(date_id)
     data_block = data[index]
     if(data_block['Date of Examination'] == date_id)
     {
-      title = data_block['Exam Subject'];
+      title = data_block['Exam Topic'];
       fmarks = data_block['Full Marks of the test'];
       values['marks'] = data_block['Marks obtained'];
       values['name'] = data_block['Your Name'];
       values['omarks'] = data_block['Marks obtained'] + "(" + data_block['Negatives'] + ")";
+      values['Negatives'] = data_block['Negatives'];
       storage.push(values);
     }
   }
@@ -213,25 +214,19 @@ function update_marksheet(date_id,data_list)
   var title = values[0];
   var fmarks = values[1];
   var storage = values[2];
-  storage.sort(function(x, y) {
-  if(x.marks < y.marks)
-  {
-    return 1;
-  }
-  if(x.marks > y.marks)
-  {
-    return -1;
-  }
-  if(x.omarks < y.omarks)
-  {
-    return -1;
-  }
-  if(x.omarks > y.omarks)
-  {
-    return 1;
-  }
-  return 0;  
-});
+  console.log(storage);
+  storage.sort(function(x,y) {
+    if(y.marks != x.marks)
+    {
+      return y.marks - x.marks;
+    }
+    else
+    {
+      return x.Negatives - y.Negatives;
+    }
+    });
+  console.log(storage);
+  console.log(title);
   document.getElementById('title').innerHTML = title;
   document.getElementById('fmarks').innerHTML = "FM : "+ fmarks;
   document.getElementById('date').innerHTML = date_id;
