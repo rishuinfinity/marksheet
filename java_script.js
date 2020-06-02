@@ -207,9 +207,9 @@ function get_marksheet_data(date_id)
   return vals;
 };
 
-function marks_comparator()
+function marks_comparator(kid1,kid2)
 {
-  return function(kid1,kid2) {    
+    
         if(kid1.marks < kid2.marks)
   {
     return 1;
@@ -227,7 +227,7 @@ function marks_comparator()
     return 1;
   }
   return 0;  
-    }
+    
 
 }
 
@@ -237,7 +237,7 @@ function update_marksheet(date_id,data_list)
   var title = values[0];
   var fmarks = values[1];
   var storage = values[2];
-  storage.sort(marks_comparator());
+  storage.sort(marks_comparator(a,b));
   document.getElementById('title').innerHTML = title;
   document.getElementById('fmarks').innerHTML = "FM : "+ fmarks;
   document.getElementById('date').innerHTML = date_id;
