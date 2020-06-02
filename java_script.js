@@ -207,30 +207,6 @@ function get_marksheet_data(date_id)
   return vals;
 };
 
-function marks_comparator(kid1,kid2)
-{
-    
-        if(kid1.marks < kid2.marks)
-  {
-    return 1;
-  }
-  if(kid1.marks > kid2.marks)
-  {
-    return -1;
-  }
-  if(kid1.omarks < kid2.omarks)
-  {
-    return -1;
-  }
-  if(kid1.omarks > kid2.omarks)
-  {
-    return 1;
-  }
-  return 0;  
-    
-
-}
-
 function update_marksheet(date_id,data_list)
 {
   var values = get_marksheet_data(date_id);
