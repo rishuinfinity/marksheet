@@ -127,7 +127,7 @@ function get_learboard_data()
       {
         values['title'] = data_block['Exam Topic'];
         values['fmarks'] = data_block['Full Marks of the test'];
-        if (values['topmarks'] < data_block['Marks obtained']) 
+        if (Number(values['topmarks']) < Number(data_block['Marks obtained')) 
         {
           values['topmarks'] = data_block['Marks obtained'];
           values['topper'] = data_block['Your Name'];
