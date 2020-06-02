@@ -183,24 +183,9 @@ function update_marksheet(date_id,data_list)
   var fmarks = values[1];
   var storage = values[2];
   storage.sort(function(x, y) {
-  if(x.marks < y.marks)
-  {
-    return 1;
-  }
-  if(x.marks > y.marks)
-  {
-    return -1;
-  }
-  if(x.omarks < y.omarks)
-  {
-    return -1;
-  }
-  if(x.omarks > y.omarks)
-  {
-    return 1;
-  }
-  return 0;  
+  return x.marks - y.marks; 
   });
+  console.log(title);
   document.getElementById('title').innerHTML = title;
   document.getElementById('fmarks').innerHTML = "FM : "+ fmarks;
   document.getElementById('date').innerHTML = date_id;
