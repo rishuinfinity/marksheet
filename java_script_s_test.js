@@ -1,35 +1,4 @@
 
-//document.write(ff);
-//document.write(gg);
-
-    
-// function csvToArray (csv) {
-//     rows = csv.split("\n");
-
-//     return rows.map(function (row) {
-//     	return row.split(",");
-//     });
-// };
-    
-//     function processData(allText) {
-//     var allTextLines = allText.split(/\r\n|\n/);
-//     var headers = allTextLines[0].split(',');
-//     var lines = [];
-
-//     for (var i=1; i<allTextLines.length; i++) {
-//         var data = allTextLines[i].split(',');
-//         if (data.length == headers.length) {
-
-//             var tarr = [];
-//             for (var j=0; j<headers.length; j++) {
-//                 tarr.push(headers[j]+":"+data[j]);
-//             }
-//             lines.push(tarr);
-//         }
-//     }
-//      //log(lines);
-//      return lines;
-// }
 function csvJSON(csv){
 // this converts csv file to json file
   var lines=csv.split("\n");
@@ -59,7 +28,7 @@ function csvJSON(csv){
 function get_data(){
 // this returns the data received in the form of javascript object
   var csv_file;
-  var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQDrSrHISpfjthbDhed0Yd42LSAG2wApNIzxdTIolFDDEWmZG6Dau-cLe3Nv0mh6VyXqS8f_qYlUw3a/pub?output=csv";
+  var url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRpIV0D6-E9YuQz8khaqt_lDrSdeMC6RmnJ7uJ05xJTjGXZ_nUjGjTIxer41WIHcTvWiOBZcc1HJ_O5/pub?output=csv";
   // fetch(url).then(a => a.text() ).then(t=>csv_file = t);
   csv_file = gfile(url);
   // console.log(csv_file);
