@@ -161,7 +161,7 @@ function get_marksheet_data(date_id)
     data_block = data[index]
     if(data_block['Date of Examination'] == date_id)
     {
-      title = data_block['Exam Subject'];
+      title = data_block['Exam Topic'];
       fmarks = data_block['Full Marks of the test'];
       values['marks'] = data_block['Marks obtained'];
       values['name'] = data_block['Your Name'];
